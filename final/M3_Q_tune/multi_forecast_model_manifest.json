@@ -1,0 +1,19 @@
+{
+  "base_outdir": "final/M3_Q_tune",
+  "forecast_models": [
+    "AutoKAN",
+    "AutoNHITS"
+  ],
+  "runs": [
+    {
+      "forecast_model": "AutoKAN",
+      "outdir": "final/M3_Q_tune/AutoKAN",
+      "results_json": "final/M3_Q_tune/AutoKAN/results_M3_Quarterly_to_M1_Quarterly_H4_L12_reject.json"
+    },
+    {
+      "forecast_model": "AutoNHITS",
+      "outdir": "final/M3_Q_tune/AutoNHITS",
+      "results_json": "final/M3_Q_tune/AutoNHITS/results_M3_Quarterly_to_M1_Quarterly_H4_L12_reject.json"
+    }
+  ]
+}

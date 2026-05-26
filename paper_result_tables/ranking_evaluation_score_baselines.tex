@@ -1,0 +1,63 @@
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{0.90}
+\caption{Ranking diagnostics by reject-score baseline. Baseline enumerates the Metamodel score, auxiliary uncertainty baselines, and the random and oracle references evaluated on the same windows. For each evaluation column, the best competitive baseline is bolded and the second best is underlined; Random and Oracle are shown as separated reference rows and are excluded from this ranking. Arrows indicate preferred direction.}
+\label{tab:metamodel-ranking-score-baselines}
+\begin{tabular}{@{}lllllcc@{}}
+\toprule
+Source & Target & $H$ & Models & Baseline & $\rho$ (S; Z/A)$\uparrow$ & C-index (S; Z/A)$\uparrow$ \\
+\midrule
+M1-M & T-M & 6 & KAN & Metamodel & \textbf{0.752};\; \underline{0.494}/\textbf{0.717} & \textbf{0.779};\; \underline{0.670}/\textbf{0.764} \\
+ &  &  &  & PI width & 0.213;\; -0.272/-0.272 & 0.573;\; 0.406/0.406 \\
+ &  &  &  & Resid scale & \underline{0.485};\; \textbf{0.519}/\underline{0.519} & \underline{0.668};\; \textbf{0.682}/\underline{0.682} \\
+ &  &  &  & Err. var. & 0.210;\; -0.316/-0.316 & 0.573;\; 0.391/0.391 \\
+\cmidrule(lr){5-7}
+ &  &  &  & Random & 0.000;\; 0.000/0.000 & 0.500;\; 0.500/0.500 \\
+ &  &  &  & Oracle & 1.000;\; 1.000/1.000 & 1.000;\; 1.000/1.000 \\
+\cmidrule(lr){4-7}
+ &  &  & NHITS & Metamodel & \textbf{0.766};\; \textbf{0.559}/\textbf{0.741} & \textbf{0.789};\; \textbf{0.695}/\textbf{0.776} \\
+ &  &  &  & PI width & 0.209;\; -0.251/-0.251 & 0.572;\; 0.413/0.413 \\
+ &  &  &  & Resid scale & \underline{0.482};\; \underline{0.473}/\underline{0.473} & \underline{0.667};\; \underline{0.663}/\underline{0.663} \\
+ &  &  &  & Err. var. & 0.204;\; -0.288/-0.288 & 0.571;\; 0.400/0.400 \\
+\cmidrule(lr){5-7}
+ &  &  &  & Random & 0.000;\; 0.000/0.000 & 0.500;\; 0.500/0.500 \\
+ &  &  &  & Oracle & 1.000;\; 1.000/1.000 & 1.000;\; 1.000/1.000 \\
+\midrule
+M1-Q & T-Q & 4 & KAN & Metamodel & \textbf{0.710};\; \textbf{0.544}/\textbf{0.764} & \textbf{0.756};\; \textbf{0.690}/\textbf{0.791} \\
+ &  &  &  & PI width & 0.247;\; -0.016/-0.016 & 0.582;\; 0.494/0.494 \\
+ &  &  &  & Resid scale & --;\; \underline{0.255}/\underline{0.255} & 0.500;\; \underline{0.587}/\underline{0.587} \\
+ &  &  &  & Err. var. & \underline{0.257};\; -0.014/-0.014 & \underline{0.587};\; 0.494/0.494 \\
+\cmidrule(lr){5-7}
+ &  &  &  & Random & 0.000;\; 0.000/0.000 & 0.500;\; 0.500/0.500 \\
+ &  &  &  & Oracle & 1.000;\; 1.000/1.000 & 1.000;\; 1.000/1.000 \\
+\cmidrule(lr){4-7}
+ &  &  & NHITS & Metamodel & \textbf{0.733};\; \textbf{0.525}/\textbf{0.751} & \textbf{0.768};\; \textbf{0.681}/\textbf{0.782} \\
+ &  &  &  & PI width & 0.247;\; 0.004/0.004 & 0.579;\; 0.501/0.501 \\
+ &  &  &  & Resid scale & --;\; \underline{0.287}/\underline{0.287} & 0.500;\; \underline{0.598}/\underline{0.598} \\
+ &  &  &  & Err. var. & \underline{0.269};\; 0.008/0.008 & \underline{0.589};\; 0.502/0.502 \\
+\cmidrule(lr){5-7}
+ &  &  &  & Random & 0.000;\; 0.000/0.000 & 0.500;\; 0.500/0.500 \\
+ &  &  &  & Oracle & 1.000;\; 1.000/1.000 & 1.000;\; 1.000/1.000 \\
+\midrule
+M3-Q & M1-Q & 4 & KAN & Metamodel & \textbf{0.750};\; \underline{0.529}/\textbf{0.755} & \textbf{0.775};\; \textbf{0.689}/\textbf{0.781} \\
+ &  &  &  & PI width & 0.556;\; 0.220/0.220 & 0.694;\; 0.573/0.573 \\
+ &  &  &  & Resid scale & 0.466;\; \textbf{0.535}/\underline{0.535} & 0.660;\; \underline{0.687}/\underline{0.687} \\
+ &  &  &  & Err. var. & \underline{0.663};\; 0.311/0.311 & \underline{0.736};\; 0.604/0.604 \\
+\cmidrule(lr){5-7}
+ &  &  &  & Random & 0.000;\; 0.000/0.000 & 0.500;\; 0.500/0.500 \\
+ &  &  &  & Oracle & 1.000;\; 1.000/1.000 & 1.000;\; 1.000/1.000 \\
+\cmidrule(lr){4-7}
+ &  &  & NHITS & Metamodel & \textbf{0.747};\; \underline{0.515}/\textbf{0.734} & \textbf{0.775};\; \underline{0.682}/\textbf{0.770} \\
+ &  &  &  & PI width & 0.612;\; 0.165/0.165 & 0.716;\; 0.557/0.557 \\
+ &  &  &  & Resid scale & 0.520;\; \textbf{0.537}/\underline{0.537} & 0.680;\; \textbf{0.693}/\underline{0.693} \\
+ &  &  &  & Err. var. & \underline{0.695};\; 0.199/0.199 & \underline{0.751};\; 0.568/0.568 \\
+\cmidrule(lr){5-7}
+ &  &  &  & Random & 0.000;\; 0.000/0.000 & 0.500;\; 0.500/0.500 \\
+ &  &  &  & Oracle & 1.000;\; 1.000/1.000 & 1.000;\; 1.000/1.000 \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{minipage}{0.98\linewidth}\scriptsize -- denotes an undefined statistic, typically because the reject score is constant on the evaluated windows (all ties); C-index=0.500 then indicates no ranking information.\end{minipage}
+\end{table}

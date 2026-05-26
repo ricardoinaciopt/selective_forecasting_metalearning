@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{0.90}
+\caption{Compact Metamodel ranking diagnostics by base models. Source and Target identify the source and transfer domains. Each metric reports S; Z/A values for source holdout, zero-shot transfer, and target adaptation; the better transfer value between Z and A is bolded. Spearman entries report rho with p-values in parentheses; non-significant p-values at alpha=0.05 are red. Arrows indicate preferred direction.}
+\label{tab:metamodel-ranking-pvalues}
+\begin{tabular}{@{}llllccc@{}}
+\toprule
+Source & Target & $H$ & Models & $\rho$ ($p$; S; Z/A)$\uparrow$ & C-index (S; Z/A)$\uparrow$ & AUCO (S; Z/A)$\downarrow$ \\
+\midrule
+M1-M & T-M & 6 & KAN & 0.752 ($<0.001$);\; 0.494 ($<0.001$)/\textbf{0.717} ($<0.001$) & 0.779;\; 0.670/\textbf{0.764} & 0.016;\; 0.058/\textbf{0.035} \\
+ &  &  & NHITS & 0.766 ($<0.001$);\; 0.559 ($<0.001$)/\textbf{0.741} ($<0.001$) & 0.789;\; 0.695/\textbf{0.776} & 0.014;\; 0.054/\textbf{0.033} \\
+\midrule
+M1-Q & T-Q & 4 & KAN & 0.710 ($<0.001$);\; 0.544 ($<0.001$)/\textbf{0.764} ($<0.001$) & 0.756;\; 0.690/\textbf{0.791} & 0.015;\; 0.053/\textbf{0.030} \\
+ &  &  & NHITS & 0.733 ($<0.001$);\; 0.525 ($<0.001$)/\textbf{0.751} ($<0.001$) & 0.768;\; 0.681/\textbf{0.782} & 0.013;\; 0.060/\textbf{0.035} \\
+\midrule
+M3-Q & M1-Q & 4 & KAN & 0.750 ($<0.001$);\; 0.529 ($<0.001$)/\textbf{0.755} ($<0.001$) & 0.775;\; 0.689/\textbf{0.781} & 0.008;\; 0.059/\textbf{0.013} \\
+ &  &  & NHITS & 0.747 ($<0.001$);\; 0.515 ($<0.001$)/\textbf{0.734} ($<0.001$) & 0.775;\; 0.682/\textbf{0.770} & 0.007;\; 0.037/\textbf{0.013} \\
+\bottomrule
+\end{tabular}
+\end{table}

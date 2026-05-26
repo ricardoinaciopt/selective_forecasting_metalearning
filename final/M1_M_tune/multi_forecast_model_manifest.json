@@ -1,0 +1,19 @@
+{
+  "base_outdir": "final/M1_M_tune",
+  "forecast_models": [
+    "AutoKAN",
+    "AutoNHITS"
+  ],
+  "runs": [
+    {
+      "forecast_model": "AutoKAN",
+      "outdir": "final/M1_M_tune/AutoKAN",
+      "results_json": "final/M1_M_tune/AutoKAN/results_M1_Monthly_to_Tourism_Monthly_H6_L12_reject.json"
+    },
+    {
+      "forecast_model": "AutoNHITS",
+      "outdir": "final/M1_M_tune/AutoNHITS",
+      "results_json": "final/M1_M_tune/AutoNHITS/results_M1_Monthly_to_Tourism_Monthly_H6_L12_reject.json"
+    }
+  ]
+}

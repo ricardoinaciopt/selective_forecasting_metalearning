@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{0.90}
+\caption{Held-out forecasting performance. Source and Target identify the source and transfer domains; subscripts S and T denote source-domain and transfer-target temporal holdouts. Entries are mean window sMAPE; lower is better, and the best method within each holdout is bolded.}
+\label{tab:forecasting-performance}
+\begin{tabular}{@{}lllrrrrrr@{}}
+\toprule
+Source & Target & $H$ & SeasonalNaive$_S\downarrow$ & KAN$_S\downarrow$ & NHITS$_S\downarrow$ & SeasonalNaive$_T\downarrow$ & KAN$_T\downarrow$ & NHITS$_T\downarrow$ \\
+\midrule
+M1-M & T-M & 6 & 0.161 & 0.144 & \textbf{0.138} & \textbf{0.252} & 0.288 & 0.307 \\
+M1-Q & T-Q & 4 & 0.166 & \textbf{0.127} & 0.129 & \textbf{0.186} & 0.272 & 0.304 \\
+M3-Q & M1-Q & 4 & 0.090 & 0.069 & \textbf{0.065} & 0.132 & 0.143 & \textbf{0.120} \\
+\bottomrule
+\end{tabular}
+\end{table}

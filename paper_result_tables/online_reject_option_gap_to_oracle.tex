@@ -1,0 +1,61 @@
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{0.90}
+\caption{Base-level results on the transfer target dataset. Keep all is target-domain sMAPE without rejection. Baseline lists the abstention methods used. Each q cell reports baseline-kept sMAPE with the distance to oracle in parentheses (baseline-kept minus oracle-kept sMAPE at the same q). Lower values and smaller distances are better; Avg. gap averages the parenthesized distances across the reported q levels.}
+\label{tab:online-reject-option-gap-to-oracle}
+\begin{tabular}{@{}llrlcccccc@{}}
+\toprule
+Target & Models & Keep all$\downarrow$ & Baseline & $q=0.05$ & $q=0.10$ & $q=0.20$ & $q=0.30$ & $q=0.40$ & Avg. gap$\downarrow$ \\
+\midrule
+T-M & KAN & 0.288 & \textbf{Ours} & \underline{0.278(0.020)} & \textbf{0.267(0.026)} & \textbf{0.249(0.035)} & \textbf{0.233(0.042)} & \textbf{0.215(0.043)} & \textbf{0.033} \\
+ &  &  & PI width & 0.287(0.029) & 0.291(0.051) & 0.304(0.091) & 0.313(0.122) & 0.325(0.154) & 0.089 \\
+ &  &  & Resid scale & \textbf{0.278(0.019)} & \underline{0.268(0.028)} & \underline{0.255(0.042)} & \underline{0.241(0.050)} & \underline{0.228(0.056)} & \underline{0.039} \\
+ &  &  & Err. var. & 0.290(0.031) & 0.295(0.054) & 0.309(0.095) & 0.316(0.125) & 0.329(0.158) & 0.093 \\
+\cmidrule(lr){4-10}
+ &  &  & Random & 0.289(0.030) & 0.287(0.046) & 0.290(0.076) & 0.289(0.098) & 0.290(0.118) & 0.074 \\
+ &  &  & Oracle & 0.259(0.000) & 0.241(0.000) & 0.214(0.000) & 0.191(0.000) & 0.172(0.000) & 0.000 \\
+\cmidrule(lr){2-10}
+ & NHITS & 0.307 & \textbf{Ours} & \textbf{0.295(0.021)} & \textbf{0.284(0.028)} & \textbf{0.264(0.037)} & \textbf{0.244(0.041)} & \textbf{0.226(0.044)} & \textbf{0.034} \\
+ &  &  & PI width & 0.304(0.030) & 0.310(0.054) & 0.322(0.096) & 0.330(0.127) & 0.343(0.161) & 0.094 \\
+ &  &  & Resid scale & \underline{0.298(0.023)} & \underline{0.290(0.034)} & \underline{0.277(0.050)} & \underline{0.262(0.059)} & \underline{0.249(0.067)} & \underline{0.047} \\
+ &  &  & Err. var. & 0.307(0.032) & 0.313(0.058) & 0.326(0.100) & 0.335(0.132) & 0.345(0.163) & 0.097 \\
+\cmidrule(lr){4-10}
+ &  &  & Random & 0.307(0.032) & 0.306(0.050) & 0.309(0.083) & 0.309(0.106) & 0.308(0.126) & 0.079 \\
+ &  &  & Oracle & 0.275(0.000) & 0.256(0.000) & 0.226(0.000) & 0.203(0.000) & 0.182(0.000) & 0.000 \\
+\midrule
+T-Q & KAN & 0.272 & \textbf{Ours} & \textbf{0.239(0.004)} & \textbf{0.229(0.013)} & \textbf{0.210(0.022)} & \textbf{0.193(0.029)} & \textbf{0.180(0.036)} & \textbf{0.021} \\
+ &  &  & PI width & 0.260(0.025) & 0.262(0.045) & 0.261(0.074) & 0.260(0.096) & 0.259(0.115) & 0.071 \\
+ &  &  & Resid scale & 0.265(0.029) & \underline{0.258(0.041)} & \underline{0.247(0.059)} & \underline{0.241(0.077)} & \underline{0.236(0.092)} & \underline{0.060} \\
+ &  &  & Err. var. & \underline{0.259(0.024)} & 0.260(0.044) & 0.260(0.072) & 0.259(0.095) & 0.256(0.112) & 0.069 \\
+\cmidrule(lr){4-10}
+ &  &  & Random & 0.274(0.039) & 0.271(0.054) & 0.272(0.084) & 0.272(0.108) & 0.274(0.130) & 0.083 \\
+ &  &  & Oracle & 0.235(0.000) & 0.217(0.000) & 0.188(0.000) & 0.164(0.000) & 0.144(0.000) & 0.000 \\
+\cmidrule(lr){2-10}
+ & NHITS & 0.304 & \textbf{Ours} & \textbf{0.278(0.010)} & \textbf{0.266(0.017)} & \textbf{0.245(0.025)} & \textbf{0.229(0.035)} & \textbf{0.211(0.040)} & \textbf{0.025} \\
+ &  &  & PI width & 0.295(0.027) & 0.295(0.045) & 0.295(0.075) & 0.293(0.098) & 0.293(0.122) & 0.073 \\
+ &  &  & Resid scale & \underline{0.291(0.023)} & \underline{0.281(0.032)} & \underline{0.267(0.047)} & \underline{0.259(0.064)} & \underline{0.253(0.082)} & \underline{0.050} \\
+ &  &  & Err. var. & 0.292(0.024) & 0.294(0.044) & 0.294(0.074) & 0.293(0.098) & 0.290(0.119) & 0.072 \\
+\cmidrule(lr){4-10}
+ &  &  & Random & 0.306(0.038) & 0.303(0.053) & 0.304(0.085) & 0.304(0.109) & 0.307(0.136) & 0.084 \\
+ &  &  & Oracle & 0.268(0.000) & 0.250(0.000) & 0.220(0.000) & 0.195(0.000) & 0.171(0.000) & 0.000 \\
+\midrule
+M1-Q & KAN & 0.143 & \textbf{Ours} & \textbf{0.124(0.029)} & \underline{0.115(0.041)} & \textbf{0.061(0.007)} & \textbf{0.050(0.008)} & \textbf{0.042(0.009)} & \textbf{0.019} \\
+ &  &  & PI width & 0.139(0.044) & 0.134(0.060) & 0.133(0.079) & 0.131(0.090) & 0.131(0.098) & 0.074 \\
+ &  &  & Resid scale & \underline{0.125(0.030)} & \textbf{0.110(0.036)} & \underline{0.096(0.043)} & \underline{0.091(0.050)} & \underline{0.084(0.051)} & \underline{0.042} \\
+ &  &  & Err. var. & 0.139(0.044) & 0.138(0.064) & 0.140(0.087) & 0.144(0.102) & 0.139(0.107) & 0.081 \\
+\cmidrule(lr){4-10}
+ &  &  & Random & 0.144(0.049) & 0.147(0.073) & 0.141(0.087) & 0.149(0.107) & 0.146(0.113) & 0.086 \\
+ &  &  & Oracle & 0.095(0.000) & 0.074(0.000) & 0.054(0.000) & 0.041(0.000) & 0.033(0.000) & 0.000 \\
+\cmidrule(lr){2-10}
+ & NHITS & 0.120 & \textbf{Ours} & \underline{0.103(0.019)} & \underline{0.098(0.030)} & \textbf{0.060(0.011)} & \textbf{0.048(0.009)} & \textbf{0.040(0.009)} & \textbf{0.016} \\
+ &  &  & PI width & 0.113(0.029) & 0.109(0.041) & 0.107(0.057) & 0.105(0.066) & 0.103(0.072) & 0.053 \\
+ &  &  & Resid scale & \textbf{0.098(0.014)} & \textbf{0.087(0.019)} & \underline{0.069(0.020)} & \underline{0.067(0.028)} & \underline{0.067(0.036)} & \underline{0.023} \\
+ &  &  & Err. var. & 0.113(0.029) & 0.112(0.045) & 0.109(0.059) & 0.112(0.073) & 0.110(0.079) & 0.057 \\
+\cmidrule(lr){4-10}
+ &  &  & Random & 0.121(0.036) & 0.122(0.055) & 0.119(0.069) & 0.124(0.085) & 0.122(0.091) & 0.067 \\
+ &  &  & Oracle & 0.084(0.000) & 0.067(0.000) & 0.050(0.000) & 0.039(0.000) & 0.031(0.000) & 0.000 \\
+\bottomrule
+\end{tabular}
+\end{table}

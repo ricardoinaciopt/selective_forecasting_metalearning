@@ -1,0 +1,61 @@
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{0.90}
+\caption{Combined ranking and selective-risk diagnostics by reject-score baseline. Each metric cell reports S; Z/A values for source holdout, zero-shot transfer, and target adaptation. The best competitive baseline is bolded and the second best is underlined within each evaluation column; Random and Oracle are reference rows and are excluded from highlighting. Spearman rho measures rank association, AUCO measures area under calibration-oracle error, and ErrDrop is the keep-all to most-selective risk ratio.}
+\label{tab:metamodel-ranking-both}
+\begin{tabular}{@{}lllllccc@{}}
+\toprule
+Source & Target & $H$ & Models & Baseline & $\rho\uparrow$ & AUCO$\downarrow$ & ErrDrop$\uparrow$ \\
+\midrule
+M1-M & T-M & 6 & KAN & Metamodel & \textbf{0.752};\; \underline{0.494}/\textbf{0.717} & \textbf{0.016};\; \underline{0.058}/\textbf{0.035} & \textbf{4.99};\; \textbf{2.58}/\underline{2.44} \\
+ &  &  &  & PI width & 0.213;\; -0.272/-0.272 & 0.106;\; 0.180/0.180 & 0.27;\; 0.50/0.50 \\
+ &  &  &  & Resid scale & \underline{0.485};\; \textbf{0.519}/\underline{0.519} & \underline{0.036};\; \textbf{0.053}/\underline{0.053} & \underline{2.74};\; \underline{2.44}/\textbf{2.44} \\
+ &  &  &  & Err. var. & 0.210;\; -0.316/-0.316 & 0.092;\; 0.186/0.186 & 1.21;\; 0.47/0.47 \\
+\cmidrule(lr){5-8}
+ &  &  &  & Random & 0.000;\; 0.000/0.000 & 0.086;\; 0.129/0.129 & 1.03;\; 1.01/1.01 \\
+ &  &  &  & Oracle & 1.000;\; 1.000/1.000 & 0.000;\; 0.000/0.000 & 23.03;\; 7.26/7.26 \\
+\cmidrule(lr){4-8}
+ &  &  & NHITS & Metamodel & \textbf{0.766};\; \textbf{0.559}/\textbf{0.741} & \textbf{0.014};\; \textbf{0.054}/\textbf{0.033} & \textbf{11.01};\; \textbf{2.41}/\textbf{2.91} \\
+ &  &  &  & PI width & 0.209;\; -0.251/-0.251 & 0.087;\; 0.188/0.188 & 0.35;\; 0.52/0.52 \\
+ &  &  &  & Resid scale & \underline{0.482};\; \underline{0.473}/\underline{0.473} & \underline{0.038};\; \underline{0.067}/\underline{0.067} & \underline{1.92};\; \underline{1.58}/\underline{1.58} \\
+ &  &  &  & Err. var. & 0.204;\; -0.288/-0.288 & 0.082;\; 0.195/0.195 & 0.62;\; 0.47/0.47 \\
+\cmidrule(lr){5-8}
+ &  &  &  & Random & 0.000;\; 0.000/0.000 & 0.083;\; 0.138/0.138 & 1.07;\; 1.00/1.00 \\
+ &  &  &  & Oracle & 1.000;\; 1.000/1.000 & 0.000;\; 0.000/0.000 & 25.55;\; 7.25/7.25 \\
+\midrule
+M1-Q & T-Q & 4 & KAN & Metamodel & \textbf{0.710};\; \textbf{0.544}/\textbf{0.764} & \textbf{0.015};\; \textbf{0.053}/\textbf{0.030} & \underline{2.88};\; \textbf{2.92}/\textbf{3.28} \\
+ &  &  &  & PI width & 0.247;\; -0.016/-0.016 & 0.059;\; 0.125/0.125 & 2.21;\; 1.33/1.33 \\
+ &  &  &  & Resid scale & --;\; \underline{0.255}/\underline{0.255} & \underline{0.049};\; \underline{0.099}/\underline{0.099} & 1.07;\; 1.64/1.64 \\
+ &  &  &  & Err. var. & \underline{0.257};\; -0.014/-0.014 & 0.062;\; 0.123/0.123 & \textbf{3.08};\; \underline{1.80}/\underline{1.80} \\
+\cmidrule(lr){5-8}
+ &  &  &  & Random & 0.000;\; 0.000/0.000 & 0.083;\; 0.138/0.138 & 0.85;\; 1.02/1.02 \\
+ &  &  &  & Oracle & 1.000;\; 1.000/1.000 & 0.000;\; 0.000/0.000 & 14.69;\; 12.02/12.02 \\
+\cmidrule(lr){4-8}
+ &  &  & NHITS & Metamodel & \textbf{0.733};\; \textbf{0.525}/\textbf{0.751} & \textbf{0.013};\; \textbf{0.060}/\textbf{0.035} & \textbf{10.85};\; \textbf{3.05}/\textbf{2.76} \\
+ &  &  &  & PI width & 0.247;\; 0.004/0.004 & 0.058;\; 0.136/0.136 & 2.14;\; 1.28/1.28 \\
+ &  &  &  & Resid scale & --;\; \underline{0.287}/\underline{0.287} & \underline{0.050};\; \underline{0.096}/\underline{0.096} & 0.98;\; 1.48/1.48 \\
+ &  &  &  & Err. var. & \underline{0.269};\; 0.008/0.008 & 0.058;\; 0.135/0.135 & \underline{2.81};\; \underline{1.58}/\underline{1.58} \\
+\cmidrule(lr){5-8}
+ &  &  &  & Random & 0.000;\; 0.000/0.000 & 0.087;\; 0.149/0.149 & 0.82;\; 1.00/1.00 \\
+ &  &  &  & Oracle & 1.000;\; 1.000/1.000 & 0.000;\; 0.000/0.000 & 21.44;\; 12.61/12.61 \\
+\midrule
+M3-Q & M1-Q & 4 & KAN & Metamodel & \textbf{0.750};\; \underline{0.529}/\textbf{0.755} & \textbf{0.008};\; 0.059/\textbf{0.013} & \underline{4.74};\; \textbf{9.38}/\textbf{11.77} \\
+ &  &  &  & PI width & 0.556;\; 0.220/0.220 & 0.016;\; 0.093/0.093 & \textbf{6.24};\; 0.44/0.44 \\
+ &  &  &  & Resid scale & 0.466;\; \textbf{0.535}/\underline{0.535} & 0.022;\; \textbf{0.056}/\underline{0.056} & 1.66;\; 0.78/0.78 \\
+ &  &  &  & Err. var. & \underline{0.663};\; 0.311/0.311 & \underline{0.012};\; \underline{0.058}/0.058 & 4.23;\; \underline{7.73}/\underline{7.73} \\
+\cmidrule(lr){5-8}
+ &  &  &  & Random & 0.000;\; 0.000/0.000 & 0.046;\; 0.106/0.106 & 0.94;\; 1.03/1.03 \\
+ &  &  &  & Oracle & 1.000;\; 1.000/1.000 & 0.000;\; 0.000/0.000 & 22.00;\; 41.23/41.23 \\
+\cmidrule(lr){4-8}
+ &  &  & NHITS & Metamodel & \textbf{0.747};\; \underline{0.515}/\textbf{0.734} & \textbf{0.007};\; \textbf{0.037}/\textbf{0.013} & \textbf{10.54};\; \textbf{11.66}/\textbf{15.55} \\
+ &  &  &  & PI width & 0.612;\; 0.165/0.165 & 0.013;\; 0.086/0.086 & \underline{7.75};\; 0.50/0.50 \\
+ &  &  &  & Resid scale & 0.520;\; \textbf{0.537}/\underline{0.537} & 0.018;\; \underline{0.047}/\underline{0.047} & 1.87;\; 0.84/0.84 \\
+ &  &  &  & Err. var. & \underline{0.695};\; 0.199/0.199 & \underline{0.010};\; 0.068/0.068 & 5.90;\; \underline{7.38}/\underline{7.38} \\
+\cmidrule(lr){5-8}
+ &  &  &  & Random & 0.000;\; 0.000/0.000 & 0.043;\; 0.087/0.087 & 0.92;\; 1.04/1.04 \\
+ &  &  &  & Oracle & 1.000;\; 1.000/1.000 & 0.000;\; 0.000/0.000 & 29.77;\; 56.52/56.52 \\
+\bottomrule
+\end{tabular}
+\end{table}
